@@ -1,0 +1,155 @@
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: #f3e5b1;
+}
+
+/* ================= COLORS ================= */
+:root {
+  --black: #000;
+  --white: #fff;
+  --gold: #c9a24d;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 70px;
+  background: var(--black);
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: bold;
+  color: var(--gold);
+}
+
+.navbar nav a {
+  color: var(--white);
+  margin-left: 28px;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+/* ================= MAIN SECTION ================= */
+.shop-register {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+}
+
+/* ================= FORM BOX ================= */
+.register-box {
+  background: #111;
+  color: var(--white);
+  width: 100%;
+  max-width: 520px;
+  padding: 50px 45px;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.register-box h2 {
+  color: var(--gold);
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #ccc;
+  margin-bottom: 30px;
+}
+
+/* ================= FORM ================= */
+.register-box form {
+  display: flex;
+  flex-direction: column;
+}
+
+.register-box h3 {
+  margin: 25px 0 10px;
+  font-size: 16px;
+  color: var(--gold);
+}
+
+/* INPUTS */
+.register-box input,
+.register-box textarea {
+  background: transparent;
+  border: 1px solid #444;
+  padding: 13px;
+  margin-bottom: 15px;
+  color: var(--white);
+  border-radius: 6px;
+}
+
+.register-box textarea {
+  resize: none;
+}
+
+.register-box input::placeholder,
+.register-box textarea::placeholder {
+  color: #aaa;
+}
+
+.register-box input:focus,
+.register-box textarea:focus {
+  outline: none;
+  border-color: var(--gold);
+}
+
+/* CHECKBOX & RADIO */
+.checkbox-group,
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.checkbox-group label,
+.radio-group label {
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* BUTTON */
+.register-box button {
+  margin-top: 20px;
+  padding: 14px;
+  background: var(--gold);
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.register-box button:hover {
+  background: var(--white);
+  color: var(--black);
+  box-shadow: 0 0 15px rgba(201,162,77,0.8);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .register-box {
+    padding: 40px 30px;
+  }
+}

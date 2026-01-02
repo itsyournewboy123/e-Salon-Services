@@ -1,0 +1,522 @@
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: #ffffff;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* ================= COLORS ================= */
+:root {
+  --black: #000000;
+  --white: #ffffff;
+  --gold: #c9a24d;
+  --light-gold: #f3e5b1;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 70px;
+  background: var(--black);
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: bold;
+  color: var(--gold);
+}
+
+.navbar nav a {
+  color: var(--white);
+  margin-left: 28px;
+  text-decoration: none;
+  font-size: 15px;
+  position: relative;
+}
+
+.navbar nav a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: var(--gold);
+  left: 0;
+  bottom: -6px;
+  transition: 0.3s;
+}
+
+.navbar nav a:hover::after {
+  width: 100%;
+}
+/* NAVBAR SIGN IN BUTTON */
+.sign-in-btn {
+  display: inline-block;
+  margin-left: 20px;
+  padding: 8px 20px;
+  background: var(--gold);
+  color: var(--black);
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+.sign-in-btn:hover {
+  background: var(--white);
+  color: var(--black);
+  box-shadow: 0 0 12px rgba(201, 162, 77, 0.8);
+  transform: translateY(-2px);
+}
+
+/* ================= SEARCH SECTION ================= */
+.search-section {
+  background: #fff;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.search-section h2 {
+  font-size: 34px;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.search-section p {
+  color: #666;
+  margin-bottom: 35px;
+  font-size: 15px;
+}
+
+/* SEARCH BOX */
+.search-box {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.search-box input {
+  padding: 14px 18px;
+  width: 260px;
+  border-radius: 30px;
+  border: 1px solid #c9a24d;
+  font-size: 14px;
+  outline: none;
+}
+
+.search-box input:focus {
+  border-color: #000;
+}
+
+/* BUTTON */
+.search-box button {
+  padding: 14px 35px;
+  border-radius: 30px;
+  background: #c9a24d;
+  color: #000;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.search-box button:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .search-box input {
+    width: 100%;
+  }
+}
+
+/* ================= HERO ================= */
+/* ================= HERO ================= */
+.hero {
+  height: 100vh;
+
+  /* Background image with overlay */
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url(https://thumbs.dreamstime.com/b/elegant-modern-hair-salon-interior-design-soft-lighting-chic-atmosphere-stunning-features-sleek-furnishings-warm-344142414.jpg);
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  color: var(--white);
+  position: relative;
+  overflow: hidden;
+
+  /* Hover animation */
+  transition: background-size 0.8s ease;
+}
+
+.hero:hover {
+  background-size: 110%;
+}
+
+/* ================= HERO CONTENT ================= */
+.hero-content {
+  animation: fadeUp 1.3s ease forwards;
+}
+
+.hero h1 {
+  font-size: 50px;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+.hero h1:hover {
+  color: var(--light-gold);
+}
+
+.hero p {
+  font-size: 18px;
+  margin-top: 10px;
+  color: var(--light-gold);
+  transition: color 0.3s ease;
+}
+
+.hero p:hover {
+  color: var(--gold);
+}
+
+/* ================= BUTTON ================= */
+.btn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 14px 36px;
+  background: var(--gold);
+  color: var(--black);
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: var(--white);
+  color: var(--black);
+  box-shadow: 0 0 18px rgba(201, 162, 77, 0.8);
+  transform: translateY(-4px);
+}
+
+/* ================= HERO ANIMATION ================= */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================= SECTIONS ================= */
+section {
+  padding: 80px 90px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 45px;
+  font-size: 32px;
+  color: var(--black);
+}
+
+/* ================= ABOUT ================= */
+.about {
+  background: var(--white);
+}
+
+.about-container {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+
+.about-text p {
+  margin-bottom: 15px;
+}
+
+.about img {
+  width: 250px;
+  border-radius: 14px;
+  height: 200px;
+  max-width: 500px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* ================= SERVICES ================= */
+.services {
+  background: #f8f8f8;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 30px;
+}
+
+.service-card {
+  background: var(--white);
+  padding: 45px 30px;
+  text-align: center;
+  border-radius: 15px;
+  border: 1px solid #eee;
+  transition: 0.4s;
+}
+.service-card img {
+  width: 100%;
+  height: 180px;
+  /* object-fit: cover; */
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.service-card h3 {
+  color: var(--black);
+  margin-bottom: 10px;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  border-color: var(--gold);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+/* SEE ALL SERVICES BUTTON */
+.see-services-container {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.see-services-btn {
+  display: inline-block;
+  padding: 14px 40px;
+  border: 2px solid var(--gold);
+  color: var(--gold);
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.see-services-btn:hover {
+  background: var(--gold);
+  color: var(--black);
+  box-shadow: 0 0 18px rgba(201, 162, 77, 0.8);
+  transform: translateY(-3px);
+}
+
+
+
+/* ================= GALLERY ================= */
+.gallery {
+  background: var(--black);
+  color: var(--white);
+}
+
+.gallery h2 {
+  color: var(--gold);
+}
+
+.gallery-subtitle {
+  color: #ccc;
+  margin-bottom: 40px;
+    text-align: center;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 14px;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.12);
+}
+
+.gallery-item .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.75);
+  color: var(--gold);
+  font-size: 20px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+/* SEE MORE BUTTON */
+.see-more-container {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.see-more-btn {
+  display: inline-block;
+  margin-top: 80px;
+  padding: 14px 40px;
+  border: 2px solid var(--gold);
+  color: var(--gold);
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.see-more-btn:hover {
+  background: var(--gold);
+  color: var(--black);
+  box-shadow: 0 0 18px rgba(201, 162, 77, 0.8);
+  transform: translateY(-3px);
+}
+
+
+.gallery-item:hover .overlay {
+  opacity: 1;
+}
+/* ================= REGISTER SHOP ================= */
+.register-shop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 100px 40px;
+  background: var(--gold);
+  color: var(--black);
+}
+
+
+.register-shop h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+  color: var(--black);
+}
+
+.register-shop p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  max-width: 600px;            /* keeps paragraph from stretching too wide */
+  color: var(--black);
+}
+
+.register-shop .btn {
+  display: inline-block;
+  padding: 16px 50px;          /* larger button for prominence */
+  min-width: 200px;            /* spreads button */
+  background: var(--black);
+  color: var(--gold);
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.register-shop .btn:hover {
+  background: var(--white);
+  color: var(--black);
+  box-shadow: 0 0 18px rgba(201, 162, 77, 0.8);
+  transform: translateY(-3px);
+}
+
+/* ================= CONTACT ================= */
+.contact {
+  background: var(--gold);           /* SAME as page background */
+  padding: 100px 40px;
+  display: flex;
+  justify-content: center;           /* center card horizontally */
+}
+
+.contact-box {
+  background:white;
+  color: black;
+  padding: 60px 50px;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 600px;                  /* prevents over-stretching */
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+}
+
+.contact-box h2 {
+  color: var(--gold);
+  font-size: 32px;
+  margin-bottom: 25px;
+}
+
+.contact-box p {
+  font-size: 17px;
+  margin: 12px 0;
+}
+
+
+/* ================= FOOTER ================= */
+footer {
+  background: white;
+  color: black;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 14px;
+  width: 100%;
+  
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .register-shop, .contact {
+    padding: 60px 30px;
+  }
+
+  .register-shop h2, .contact h2 {
+    font-size: 28px;
+  }
+
+  .register-shop p, .contact p {
+    font-size: 16px;
+  }
+
+  .register-shop .btn {
+    padding: 14px 36px;
+    min-width: 150px;
+  }
+  
+
+}
+

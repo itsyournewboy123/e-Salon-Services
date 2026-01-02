@@ -1,0 +1,189 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+:root {
+  --black: #000;
+  --white: #fff;
+  --gold: #c9a24d;
+  --light-gold: #f3e5b1;
+}
+
+body {
+  background: var(--white);
+  color: #222;
+}
+
+/* NAVBAR */
+.navbar {
+  background: var(--black);
+  padding: 18px 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: var(--gold);
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.navbar nav a {
+  color: var(--white);
+  margin-left: 25px;
+  text-decoration: none;
+  font-size: 15px;
+  position: relative;
+}
+
+.navbar nav a.active,
+.navbar nav a:hover {
+  color: var(--gold);
+}
+
+/* PAGE TITLE */
+.page-title {
+  text-align: center;
+  padding: 70px 20px;
+  background: #f8f8f8;
+}
+
+.page-title h1 {
+  font-size: 38px;
+  color: var(--black);
+}
+
+.page-title p {
+  color: #666;
+  margin-top: 10px;
+}
+
+/* SALON LIST */
+.salon-list {
+  padding: 80px 90px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+/* SALON CARD */
+.salon-card {
+  display: flex;
+  background: var(--white);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+  transition: 0.4s;
+}
+
+.salon-card:hover {
+  transform: translateY(-6px);
+}
+
+.salon-card img {
+  width: 220px;
+  object-fit: cover;
+}
+
+
+/* INFO */
+.salon-info {
+  padding: 30px;
+}
+
+.salon-info h3 {
+  font-size: 24px;
+  color: var(--black);
+  margin-bottom: 8px;
+}
+
+.city {
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.rating {
+  color: var(--gold);
+  font-weight: 600;
+}
+
+.home-service {
+  margin: 10px 0 20px;
+  color: green;
+}
+
+.home-service.no {
+  color: red;
+}
+
+/* BUTTON */
+.btn {
+  display: inline-block;
+  padding: 12px 32px;
+  background: var(--gold);
+  color: var(--black);
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 30px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: var(--black);
+  color: var(--white);
+}
+
+/* CONTACT */
+.contact {
+  text-align: center;
+  padding: 70px 20px;
+  background: var(--white);
+}
+
+.contact h2 {
+  margin-bottom: 15px;
+}
+
+/* FOOTER */
+footer {
+  background: var(--black);
+  color: var(--white);
+  text-align: center;
+  padding: 18px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .salon-card {
+    flex-direction: column;
+  }
+
+  .salon-card img {
+    width: 100%;
+    height: 220px;
+  }
+
+  .salon-list {
+    padding: 60px 30px;
+  }
+}
+@media (max-width: 900px) {
+  .salon-list {
+    grid-template-columns: 1fr;
+    padding: 60px 30px;
+  }
+
+  .salon-card {
+    flex-direction: column;
+  }
+
+  .salon-card img {
+    width: 100%;
+    height: 220px;
+  }
+}

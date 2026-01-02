@@ -1,0 +1,155 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+:root {
+  --black: #000;
+  --white: #fff;
+  --gold: #c9a24d;
+  --light-gold: #f3e5b1;
+}
+
+/* LAYOUT */
+.admin-container {
+  display: flex;
+  min-height: 100vh;
+  background: #f5f5f5;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 260px;
+  background: var(--black);
+  color: var(--white);
+  padding: 30px 20px;
+}
+
+.sidebar h2 {
+  color: var(--gold);
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar ul li {
+  padding: 14px 18px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.sidebar ul li:hover,
+.sidebar ul li.active {
+  background: var(--gold);
+  color: var(--black);
+}
+
+/* MAIN CONTENT */
+.main-content {
+  flex: 1;
+  padding: 30px 40px;
+}
+
+/* HEADER */
+.admin-header {
+  margin-bottom: 30px;
+}
+
+.admin-header h1 {
+  font-size: 32px;
+}
+
+/* STATS */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.stat-card {
+  background: var(--white);
+  padding: 25px;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.stat-card h3 {
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.stat-card p {
+  font-size: 30px;
+  font-weight: bold;
+  color: var(--gold);
+}
+
+/* TABLE */
+.table-section h2 {
+  margin-bottom: 15px;
+}
+
+table {
+  width: 100%;
+  background: var(--white);
+  border-radius: 12px;
+  overflow: hidden;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 14px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+
+th {
+  background: #f8f8f8;
+}
+
+/* BUTTONS */
+button {
+  padding: 8px 14px;
+  border-radius: 20px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.approve {
+  background: var(--gold);
+  color: var(--black);
+}
+
+.reject {
+  background: #e74c3c;
+  color: #fff;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .admin-container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    display: flex;
+    overflow-x: auto;
+  }
+
+  .sidebar ul {
+    display: flex;
+    gap: 10px;
+  }
+}
